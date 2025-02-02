@@ -58,8 +58,6 @@ class SpacedRepititionTrainer(Trainer):
         """
         loss = super().training_step(model, inputs)
 
-        nn.utils.clip_grad_norm_(model.parameters(), self.args.max_grad_norm, norm_type=2.0)
-
         # Update the sampler with the loss from this batch
         self.train_sampler.update_difficulties(loss.item())
 
