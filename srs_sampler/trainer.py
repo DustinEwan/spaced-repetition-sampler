@@ -5,7 +5,7 @@ from torch.utils.data import DataLoader
 from typing import Dict, Union, Any
 from spaced_repetition_sampler import SpacedRepetitionSampler, ExponentialMovingStats
 
-class SpacedRepititionTrainer(Trainer):
+class SpacedRepetitionTrainer(Trainer):
     
     def get_train_dataloader(self) -> DataLoader:
         """
